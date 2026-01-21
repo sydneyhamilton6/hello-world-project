@@ -13,33 +13,125 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         .container {
-            text-align: center;
-            background: white;
-            padding: 60px 80px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
             animation: fadeIn 0.8s ease-in;
         }
 
-        h1 {
-            font-size: 3.5rem;
-            color: #667eea;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        .weiner-dog {
+            position: relative;
+            width: 600px;
+            height: 250px;
         }
 
-        p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.6;
+        .dog-body {
+            position: absolute;
+            width: 400px;
+            height: 120px;
+            background: #D2691E;
+            border-radius: 60px;
+            top: 80px;
+            left: 100px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .dog-head {
+            position: absolute;
+            width: 140px;
+            height: 100px;
+            background: #D2691E;
+            border-radius: 50px;
+            top: 90px;
+            left: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .dog-snout {
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            background: #C45F1E;
+            border-radius: 25px;
+            top: 35px;
+            left: -25px;
+        }
+
+        .dog-nose {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            border-radius: 50%;
+            top: 15px;
+            left: -15px;
+        }
+
+        .dog-ear {
+            position: absolute;
+            width: 70px;
+            height: 40px;
+            background: #A0522D;
+            border-radius: 20px;
+            top: 20px;
+            left: 40px;
+            transform: rotate(-20deg);
+        }
+
+        .dog-eye {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #000;
+            border-radius: 50%;
+            top: 30px;
+            left: 25px;
+        }
+
+        .dog-tail {
+            position: absolute;
+            width: 80px;
+            height: 15px;
+            background: #D2691E;
+            border-radius: 10px;
+            top: 85px;
+            right: -10px;
+            transform: rotate(-25deg);
+            transform-origin: left;
+            animation: wagTail 0.5s infinite alternate;
+        }
+
+        .dog-leg {
+            position: absolute;
+            width: 25px;
+            height: 60px;
+            background: #D2691E;
+            border-radius: 12px;
+            bottom: 10px;
+        }
+
+        .leg1 { left: 130px; }
+        .leg2 { left: 180px; }
+        .leg3 { left: 380px; }
+        .leg4 { left: 430px; }
+
+        h1 {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+            white-space: nowrap;
         }
 
         @keyframes fadeIn {
@@ -52,12 +144,35 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes wagTail {
+            from {
+                transform: rotate(-25deg);
+            }
+            to {
+                transform: rotate(-35deg);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hello World!</h1>
-        <p>Welcome to your styled HTML page</p>
+        <div class="weiner-dog">
+            <div class="dog-body"></div>
+            <div class="dog-head">
+                <div class="dog-snout">
+                    <div class="dog-nose"></div>
+                </div>
+                <div class="dog-ear"></div>
+                <div class="dog-eye"></div>
+            </div>
+            <div class="dog-tail"></div>
+            <div class="dog-leg leg1"></div>
+            <div class="dog-leg leg2"></div>
+            <div class="dog-leg leg3"></div>
+            <div class="dog-leg leg4"></div>
+        </div>
     </div>
 </body>
 </html>
