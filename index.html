@@ -152,43 +152,58 @@
 
         .bone {
             position: absolute;
-            bottom: 35%;
-            right: 200px;
-            width: 80px;
-            height: 20px;
+            bottom: 30%;
+            right: 100px;
+            width: 200px;
+            height: 50px;
             background: #F5DEB3;
-            border-radius: 10px;
+            border-radius: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
                         inset 0 2px 5px rgba(255, 255, 255, 0.5);
-            transform: rotate(-15deg);
+            transform: rotate(-10deg);
             z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .bone::before,
         .bone::after {
             content: '';
             position: absolute;
-            width: 25px;
-            height: 25px;
+            width: 50px;
+            height: 50px;
             background: #F5DEB3;
             border-radius: 50%;
             box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5);
         }
 
         .bone::before {
-            left: -10px;
+            left: -20px;
             top: 50%;
             transform: translateY(-50%);
-            box-shadow: -8px 0 0 #F5DEB3, 8px 0 0 #F5DEB3,
+            box-shadow: -15px 0 0 #F5DEB3, 15px 0 0 #F5DEB3,
                         inset 0 2px 5px rgba(255, 255, 255, 0.5);
         }
 
         .bone::after {
-            right: -10px;
+            right: -20px;
             top: 50%;
             transform: translateY(-50%);
-            box-shadow: -8px 0 0 #F5DEB3, 8px 0 0 #F5DEB3,
+            box-shadow: -15px 0 0 #F5DEB3, 15px 0 0 #F5DEB3,
                         inset 0 2px 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .bone-text {
+            position: relative;
+            z-index: 2;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #8B4513;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+            transform: rotate(10deg);
+            padding: 0 20px;
         }
 
         .container {
@@ -483,7 +498,9 @@
             <div class="tree-leaves"></div>
         </div>
         <div class="grass"></div>
-        <div class="bone"></div>
+        <div class="bone">
+            <div class="bone-text">I'm Sydney and I'm ready to Vibe Code</div>
+        </div>
     </div>
     <div class="container">
         <h1>Hello World!</h1>
